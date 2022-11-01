@@ -1,0 +1,316 @@
+:root {
+  --primary: #8a00ff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #111;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #503e6c;
+  width: 100%;
+  padding: 1rem;
+}
+
+header h1 {
+  color: white;
+  cursor: pointer;
+}
+
+main {
+  padding: 20px;
+  overflow: auto;
+  margin: 0;
+}
+
+h2,
+h3 {
+  color: white;
+  font-size: 15px;
+}
+
+.column {
+  float: left;
+  flex-direction: row;
+}
+
+.left {
+  width: 40%;
+  max-height: 420px;
+  text-align: center;
+}
+
+.right {
+  width: 60%;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 800px) {
+  .column {
+    width: 100%;
+  }
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.card {
+  background: #1b1b1b;
+  text-decoration: none;
+  color: white;
+  box-shadow: 1px 1px 15px 0 rgb(0 0 0 / 6%);
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  position: relative;
+  top: 0;
+  transition: all 0.1s ease-in;
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.card:hover {
+  top: -2px;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: white;
+  text-align: center;
+}
+.card p {
+  flex: 1;
+  line-height: 2;
+}
+
+aside {
+  float: right;
+  width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .column .left,
+  .column .right {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.title {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 0.75rem;
+  align-items: center;
+}
+
+.form-group input {
+  border: 2px solid var(--primary);
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  width: 80%;
+  font-size: 1rem;
+  outline: var(--primary);
+  background-color: #1c1c1c;
+  color: white;
+  margin: 5px;
+}
+
+.form-group input:focus {
+  border: 2px solid #bf00ff;
+}
+
+.form-group input:not(:placeholder-shown) ~ label,
+.form-group input:focus ~ label {
+  top: 0;
+  left: 0.75rem;
+  color: var(--primary);
+  padding: 0 0.25rem;
+  background-color: #fff;
+  font-size: 12px;
+}
+#form-search .form-group {
+  margin-bottom: 0;
+}
+#form-search .form-group input {
+  max-width: 60%;
+}
+.right .card h2 {
+  text-align: left;
+}
+
+.submit-btn {
+  border: none;
+  outline: none;
+  background-color: var(--primary);
+  color: #fff;
+  font-weight: 600;
+  padding: 0.5rem 2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+
+.submit-btn:hover,
+.btn.search:hover {
+  background-color: #7b03e4;
+}
+
+.check {
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.check input,
+.check label {
+  cursor: pointer;
+}
+
+.item {
+  border: 2px solid var(--primary);
+  padding: 0.5rem 1rem;
+  display: flex;
+  margin-bottom: 0.5rem;
+}
+.book-detail {
+  text-align: left;
+  width: 70%;
+  float: left;
+}
+.book-title {
+  color: white;
+  font-weight: 900;
+}
+.book-title span {
+  color: white;
+}
+.book-author {
+  font-weight: 400;
+  font-size: 14px;
+  color: white;
+}
+.book-year {
+  font-weight: 400;
+  font-size: 14px;
+}
+.action {
+  display: flex;
+  gap: 0.25rem;
+  float: right;
+  width: 30%;
+}
+
+.btn {
+  padding: 0.25rem 0.5rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 1.25rem;
+  border-radius: 0.25rem;
+  margin-top: 20px;
+  min-height: 30px;
+  width: 38px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+}
+
+.btn.search {
+  background-color: var(--primary);
+  justify-self: center;
+  width: 30px;
+  display: inline-flex;
+}
+
+.btn.reset {
+  background-color: lightgrey;
+  justify-self: center;
+  width: 30px;
+  display: inline-flex;
+  padding-bottom: 6px;
+}
+i.gg-undo {
+  min-width: 14px;
+}
+i.gg-search {
+  width: 15px;
+}
+
+.btn.reset:hover {
+  background-color: rgb(180, 178, 178);
+}
+
+.btn.delete {
+  background-color: #ef4444;
+}
+
+.btn.delete:hover {
+  background-color: hsl(0, 84%, 50%);
+}
+
+.btn.done {
+  background-color: white;
+}
+
+.btn.done:hover {
+  background-color: rgb(240, 240, 240);
+}
+
+.btn.undo {
+  background-color: white;
+}
+
+.btn.undo:hover {
+  background-color: rgb(240, 240, 240);
+}
+
+.hidden {
+  display: none;
+}
+
+.row {
+  display: flex;
+  gap: 0.75rem;
+}
+
+@media screen and (max-width: 572px) {
+  .top,
+  .bottom {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 0;
+  }
+}

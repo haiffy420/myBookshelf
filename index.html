@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>myBookshelf</title>
+    <link rel="stylesheet" href="assets/styles/style.css" />
+    <link
+      href="https://css.gg/css?=|check-o|check-r|check|search|trash-empty|trash|undo"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>myBookshelf</h1>
+    </header>
+    <main>
+      <div class="row">
+        <div class="column left">
+          <div class="card">
+            <h2 class="title">Tambah Buku Baru</h2>
+            <form id="input-book" action="" method="post">
+              <label for="title">Judul</label>
+              <div class="form-group">
+                <input
+                  type="text"
+                  name="title"
+                  id="title"
+                  placeholder=""
+                  required
+                />
+              </div>
+              <label for="author">Penulis</label>
+              <div class="form-group">
+                <input
+                  type="text"
+                  name="author"
+                  id="author"
+                  placeholder=""
+                  required
+                />
+              </div>
+              <label for="year">Tahun</label>
+              <div class="form-group">
+                <input
+                  type="number"
+                  name="year"
+                  id="year"
+                  placeholder=""
+                  required
+                />
+              </div>
+              <div class="check">
+                <input
+                  type="checkbox"
+                  name="completed-book"
+                  id="completed-book"
+                  placeholder=""
+                />
+                <label for="completed-book">Sudah selesai dibaca</label>
+              </div>
+              <button type="submit" class="submit-btn">Tambah</button>
+            </form>
+          </div>
+        </div>
+        <div class="column right">
+          <aside>
+            <div class="card">
+              <h2 class="title">Cari Buku</h2>
+              <form id="form-search" action="" method="post">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    name="search-title"
+                    id="search-title"
+                    placeholder="Cari judul buku..."
+                  />
+                  <button type="submit" class="btn search">
+                    <i class="gg-search"></i>
+                  </button>
+                  <button type="reset" class="btn reset">
+                    <i class="gg-undo"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div class="top">
+              <div class="card">
+                <h2 class="title">Buku belum selesai dibaca</h2>
+                <div id="un-read"></div>
+              </div>
+            </div>
+            <div class="bottom">
+              <div class="card">
+                <h2 class="title">Buku sudah dibaca</h2>
+                <div id="done-read"></div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </main>
+    <script type="text/javascript" src="assets/js/script.js"></script>
+  </body>
+</html>
