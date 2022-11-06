@@ -31,6 +31,7 @@ header {
 header h1 {
   color: white;
   cursor: pointer;
+  display: inline;
 }
 
 main {
@@ -312,5 +313,8 @@ i.gg-search {
   .row {
     flex-direction: column;
     gap: 0;
+  }
+  header {
+    justify-content: center;
   }
 }
